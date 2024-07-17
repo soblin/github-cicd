@@ -1,0 +1,16 @@
+name: 2-5-2_choice
+on:
+  workflow_dispatch: # これを指定すると手動実行になる
+    inputs:
+      log-level:
+        type: choice # 選択肢にする
+        options:
+          - info
+          - warn
+          - error
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "${{ inputs.log-level }}"
+  

@@ -1,4 +1,4 @@
-name: Manual
+name: 2-5-2
 on:
   workflow_dispatch: # これを指定すると手動実行になる
     inputs:
