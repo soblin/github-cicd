@@ -1,0 +1,8 @@
+name: ch3-1(コンテキスト)
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      # github.run_id = 10002203438, github.head_ref = , github.workspace = /home/runner/work/github-cicd/github-cicd, github.repository = soblin/github-cicd, github.actor = soblin みたいな感じになる
+      - run: echo "github.run_id = ${{ github.run_id }}, github.head_ref = ${{ github.head_ref }}, github.workspace = ${{ github.workspace }}, github.repository = ${{ github.repository }}, github.actor = ${{ github.actor }}"
