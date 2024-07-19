@@ -1,4 +1,4 @@
-name: 2-5-2_choice
+name: ch2-5-2(選択肢の作り方)
 on:
   workflow_dispatch: # これを指定すると手動実行になる
     inputs:

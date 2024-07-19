@@ -1,0 +1,13 @@
+name: ch3-2-1(環境変数の参照)
+on:
+  workflow_dispatch:
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    env:
+      BRANCH: main # このワークフローファイルで使う環境変数を定義
+    steps:
+      - run: echo "${BRANCH}" # クオートする
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.BRANCH }} # envコンテキストにもBRANCHというものがある

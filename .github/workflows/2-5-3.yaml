@@ -1,4 +1,4 @@
-name: 定期実行
+name: ch2-5-3(定期実行)
 on:
   schedule:
     - cron: '15 * * * *' # 15分ごと

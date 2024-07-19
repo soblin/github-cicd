@@ -1,4 +1,4 @@
-name: 2-5-2
+name: ch2-5-2(手動実行方法)
 on:
   workflow_dispatch: # これを指定すると手動実行になる
     inputs:
