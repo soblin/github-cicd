@@ -1,0 +1,17 @@
+name: ch3-7-1(ステータスチェック関数)
+on:
+  workflow_dispatch
+jobs:
+  fail:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 1
+      - run: echo "failed"
+        if: ${{ failure() }}
+
+  success:
+    runs-on: ubuntu-latest
+    steps:
+      - run: exit 0
+      - run: echo "success"
+        if: ${{ success() }}
