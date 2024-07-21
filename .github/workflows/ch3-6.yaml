@@ -1,0 +1,25 @@
+name: ch3-6(関数)
+on:
+  workflow_dispatch
+jobs:
+  functions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: printenv | grep '_func'
+        env:
+          contains_func: ${{ contains('Hello', 'ell') }}
+          start_with_func: ${{ startsWith('Hello', 'He') }}
+          end_with_func: ${{ endsWith('Hello', 'llo') }}
+
+      - run: printenv | grep '_func'
+        env:
+          format_func: ${{ format('{0} {1}', 'Hello', 'world') }}
+          join_func: ${{ join(github.event.*.html_url, ',') }}
+
+      - run: echo ${ctx}
+        env:
+          ctx: ${{ toJson(github) }}
+
+      - run: echo "${HASH}"
+        env:
+          HASH: ${{ hashFiles('.github/workflows/*.yaml') }}
