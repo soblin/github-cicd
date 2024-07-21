@@ -1,0 +1,11 @@
+name: ch3-3-2(Variablesの参照)
+on:
+  workflow_dispatch:
+
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{ vars.USERNAME }}
+    steps:
+      - run: echo "${USERNAME}"
