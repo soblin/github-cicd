@@ -1,0 +1,11 @@
+name: ch3-4-2(Secretsの参照とログマスク)
+on:
+  workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      PASSWORD: ${{ secrets.PASSWORD }}
+    steps:
+      - run: echo "${PASSWORD}" # これはマスクされる
+      - run: echo "${PASSWORD:0:1}" "${PASSWORD#?}" # これは
