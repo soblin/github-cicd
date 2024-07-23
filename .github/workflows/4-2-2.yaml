@@ -1,4 +1,4 @@
-name: ch4-2-2(PRのテストの例)
+name: ch4-2-2
 on:
   pull_request:
     paths: ['go/**/*.go']
