@@ -3,7 +3,7 @@ on:
   pull_request:
     paths: ['go/**/*.go']
 jobs:
-  test:
+  ch4-2-2_test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
