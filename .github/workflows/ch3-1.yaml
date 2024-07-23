@@ -1,5 +1,6 @@
 name: ch3-1(コンテキスト)
-on: push
+on:
+  workflow_dispatch
 jobs:
   print:
     runs-on: ubuntu-latest
